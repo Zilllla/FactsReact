@@ -8,8 +8,8 @@ const baseURL = "https://cat-fact.herokuapp.com/facts";
 // };
 
 class CatFacts extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       facts: []
     };
@@ -23,6 +23,7 @@ class CatFacts extends Component {
     return (
       <div>
         <h2>Cat Facts</h2>
+        <h4>{this.state.facts.text}</h4>
       </div>
     );
   }
